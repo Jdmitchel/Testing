@@ -8,8 +8,8 @@ index_views = Blueprint('index_views', __name__, template_folder='../templates')
 def index_page():
     return render_template('index.html')
 
-@index_views.route('<path:about>', methods=['GET'])
-def about_page(about):
+@index_views.route('/about', methods=['GET'])
+def about_page():
     return render_template('about.html')
 
 @index_views.route('/init', methods=['GET'])
