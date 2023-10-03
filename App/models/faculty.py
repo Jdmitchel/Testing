@@ -11,9 +11,3 @@ class Faculty(db.Model):
     def __init__(self, facultyName):
         self.facultyName = facultyName
 
-    
-
-
-@app.before_first_request
-def create_tables():
-    db.create_all()
