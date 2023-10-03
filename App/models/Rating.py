@@ -1,8 +1,7 @@
 from App.database import db
-from flask_security import UserMixin, RoleMixin
 
 
-class Rating(db.Model, UserMixin):
+class Rating(db.Model):
     ratingId = db.Column(db.Integer, primary_key=True)
     studentId = db.Column(db.Integer, db.ForeignKey('student.studentId'), nullable=False)
     teacherId = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)

@@ -1,8 +1,7 @@
 from App.database import db
-from flask_security import UserMixin, RoleMixin
 
 
-class Student(db.Model, UserMixin):
+class Student(db.Model):
     studentId = db.Column(db.Integer, primary_key=True)
     facultyId = db.Column(db.Integer, db.ForeignKey('faculty.facultyId'), nullable=False)
     studentName = db.Column(db.String, nullable=False, unique=True)
